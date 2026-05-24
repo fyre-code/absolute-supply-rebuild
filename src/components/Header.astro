@@ -9,13 +9,13 @@ const nav = [
 ];
 const path = Astro.url.pathname;
 ---
-<header id="site-header" class="sticky lg:static top-0 left-0 right-0 z-50 bg-white shadow-sm">
+<header id="site-header" class="sticky md:static top-0 left-0 right-0 z-50 bg-white shadow-sm">
   <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3" aria-label="Absolute Kitchen and Bath home">
       <img src="/logo-kitchen-and-bath.png" alt="Absolute Kitchen and Bath" class="h-12 w-auto" width="120" height="118" />
     </a>
 
-    <nav class="hidden lg:flex items-center gap-8">
+    <nav class="hidden md:flex items-center gap-8">
       {nav.map((item) => (
         <a
           href={item.href}
@@ -29,17 +29,20 @@ const path = Astro.url.pathname;
       ))}
     </nav>
 
-    <button id="menu-toggle" class="lg:hidden text-charcoal" aria-label="Open menu" aria-expanded="false">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <button id="menu-toggle" class="md:hidden text-charcoal relative z-[60]" aria-label="Open menu" aria-expanded="false">
+      <svg id="icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+      <svg id="icon-close" class="hidden" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="5" x2="19" y2="19" /><line x1="19" y1="5" x2="5" y2="19" />
       </svg>
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-charcoal/95 backdrop-blur-sm z-40">
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-charcoal/95 backdrop-blur-sm z-40">
     <div class="flex flex-col items-center justify-center h-full gap-8">
       {nav.map((item) => (
-        <a href={item.href} class="text-2xl font-medium uppercase tracking-wider text-white hover:text-brand-red">
+        <a href={item.href} data-mobile-link class="text-2xl font-medium uppercase tracking-wider text-white hover:text-brand-red">
           {item.label}
         </a>
       ))}
@@ -52,11 +55,29 @@ const path = Astro.url.pathname;
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
 
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  const setMenu = (open: boolean) => {
+    if (!menu || !toggle) return;
+    menu.classList.toggle('hidden', !open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
   toggle?.addEventListener('click', () => {
-    if (!menu) return;
-    const open = !menu.classList.contains('hidden');
-    menu.classList.toggle('hidden');
-    toggle.setAttribute('aria-expanded', String(!open));
-    document.body.style.overflow = open ? '' : 'hidden';
+    const isOpen = menu ? !menu.classList.contains('hidden') : false;
+    setMenu(!isOpen);
+  });
+
+  document.querySelectorAll('[data-mobile-link]').forEach((link) => {
+    link.addEventListener('click', () => setMenu(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setMenu(false);
   });
 </script>
