@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroCarousel from '../components/HeroCarousel.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const slides = [
+  {
+    image: '/images/kitchen-showroom-hero.jpg',
+    alt: 'Modern kitchen showroom with custom cabinetry',
+    headline: 'Kitchens & Baths Built Around You',
+    sub: 'Custom cabinets, premium countertops, and flooring — designed and installed by a Melbourne, FL team that takes craft seriously.',
+  },
+  {
+    image: '/images/kitchen-cabinetry-finished.jpeg',
+    alt: 'Finished custom kitchen cabinetry',
+    headline: 'Premium Cabinetry, Local Service',
+    sub: 'Fabuwood, Schrock, Mantra, Northpoint — top brands, expert design, complimentary 3D consultations.',
+  },
+  {
+    image: '/images/kitchen-counter-quartz.jpg',
+    alt: 'Quartz kitchen countertop',
+    headline: 'Countertops That Define the Room',
+    sub: 'Pompeii Quartz and natural stone, fabricated and installed with precision.',
+  },
+  {
+    image: '/images/cabinet-showcase.jpg',
+    alt: 'Cabinet showcase from Absolute Kitchen and Bath showroom',
+    headline: 'Walk the Showroom',
+    sub: 'Real samples, real slabs, real installs — see what your kitchen could look like before you commit.',
+  },
+];
+
+const keywords = [
+  'kitchen and bath Melbourne FL',
+  'custom cabinets Melbourne',
+  'countertop installation Brevard County',
+  'flooring installation Melbourne FL',
+  'kitchen remodel Melbourne FL',
+  'bathroom remodel Melbourne',
+  'Fabuwood cabinets',
+  'Pompeii Quartz dealer',
+  'showroom Melbourne FL',
+  'Absolute Kitchen and Bath',
+  '3D kitchen design',
+  'Brevard County remodeling',
+];
+---
+<BaseLayout
+  title="Absolute Kitchen and Bath - Melbourne, FL Remodeling"
+  description="Absolute Kitchen and Bath provides cabinets, flooring, and countertops in Melbourne, FL. Contact us at 321-345-5641."
+  path="/"
+  keywords={keywords}
+  imageUrl="https://www.absolutekitchenandbath.com/images/kitchen-showroom-hero.jpg"
+  imageAlt="Absolute Kitchen and Bath showroom"
+>
+  <HeroCarousel slides={slides} />
+
+  <section class="py-24 bg-cream">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="max-w-3xl" data-reveal>
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">What We Do</span>
+        <h2 class="mt-3 text-4xl md:text-5xl font-display font-bold text-charcoal">Three Specialties. One Showroom.</h2>
+        <p class="mt-4 text-lg text-muted normal-case">From the first sketch to the final install, we handle the parts of your home that get used every day — and we do it under one roof.</p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
+        <ServiceCard
+          href="/cabinets"
+          image="/images/kitchen-cabinetry-finished.jpeg"
+          alt="Custom kitchen cabinetry"
+          title="Cabinets"
+          description="Custom kitchen and bath cabinetry from Fabuwood, Schrock, Mantra, and Northpoint. Complimentary 3D design."
+        />
+        <ServiceCard
+          href="/countertops"
+          image="/images/kitchen-counter-quartz.jpg"
+          alt="Quartz countertop"
+          title="Countertops"
+          description="Pompeii Quartz and natural stone. Precision-fabricated edges, expert templating and installation."
+        />
+        <ServiceCard
+          href="/flooring"
+          image="/images/flooring-installation.jpg"
+          alt="Flooring installation"
+          title="Flooring"
+          description="Luxury vinyl plank, tile, and hardwood. Durable, beautiful, and installed by professionals."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div data-reveal>
+        <img src="/images/kitchen-showroom-hero.jpg" alt="Kitchen showroom in Melbourne, FL" class="w-full h-auto object-cover" />
+      </div>
+      <div data-reveal>
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Why Us</span>
+        <h2 class="mt-3 text-4xl md:text-5xl font-display font-bold text-charcoal">Showroom-Quality. Locally Owned.</h2>
+        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">We're a Melbourne, FL showroom serving Brevard County homeowners and contractors. Walk in, see real materials, and work with the same team from design through install.</p>
+        <ul class="mt-6 space-y-3 normal-case text-charcoal">
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Free 3D design consultations</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Top-tier brand partnerships</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> One project manager from start to finish</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Honest pricing, no surprise fees</li>
+        </ul>
+        <a href="/contact" class="mt-8 inline-block bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Schedule a Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-charcoal text-white">
+    <div class="mx-auto max-w-4xl px-6 text-center" data-reveal>
+      <h2 class="text-4xl md:text-5xl font-display font-bold">Ready to Start Your Project?</h2>
+      <p class="mt-4 text-lg text-white/80 normal-case">Stop by the showroom or request a free quote. We'll help you map out the kitchen, bath, or floor you've been picturing.</p>
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <a href="/contact" class="inline-block bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Request a Quote</a>
+        <a href="tel:3213455641" class="inline-block border border-white/70 hover:bg-white hover:text-charcoal text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">321-345-5641</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

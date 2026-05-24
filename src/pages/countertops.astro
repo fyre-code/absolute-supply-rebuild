@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HyppoForm from '../components/HyppoForm.astro';
+
+const keywords = [
+  'countertops Melbourne FL',
+  'quartz countertops',
+  'Pompeii Quartz',
+  'kitchen countertops Brevard County',
+  'bathroom vanity tops',
+  'granite countertops',
+  'stone fabrication',
+  'countertop installation Melbourne',
+  'natural stone countertops',
+  'edge profiles',
+  'Absolute Kitchen and Bath',
+  'countertop showroom',
+];
+---
+<BaseLayout
+  title="Countertops & Quartz - Absolute Kitchen and Bath - Melbourne, FL"
+  description="Absolute Kitchen and Bath provides quartz and stone countertops in Melbourne, FL. Contact us at 321-345-5641."
+  path="/countertops"
+  keywords={keywords}
+  imageUrl="https://www.absolutekitchenandbath.com/images/kitchen-counter-quartz.jpg"
+  imageAlt="Quartz countertop installation"
+>
+  <section class="relative pt-32 pb-20 bg-charcoal text-white">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/kitchen-counter-quartz.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6">
+      <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
+      <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Countertops</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/85 normal-case">Quartz and natural stone, precision-templated and expertly installed.</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-reveal>
+        <img src="/images/kitchen-counter-quartz.jpg" alt="Quartz kitchen countertop with island" class="w-full h-auto" />
+      </div>
+      <div data-reveal>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal">The Surface That Sets the Room</h2>
+        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">Counters are the most-used surface in your home — and the most-noticed. We carry Pompeii Quartz alongside a curated lineup of natural stone, with in-house templating and precision fabrication.</p>
+        <ul class="mt-6 space-y-3 normal-case text-charcoal">
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Pompeii Quartz dealer</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Granite, marble, and quartzite</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Laser-template precision</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Custom edge profiles</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Kitchen, bath, and vanity surfaces</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="mx-auto max-w-3xl px-6" data-reveal>
+      <HyppoForm heading="Request a Countertop Quote" />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,73 @@
+---
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/cabinets', label: 'Cabinets' },
+  { href: '/flooring', label: 'Flooring' },
+  { href: '/countertops', label: 'Countertops' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+const path = Astro.url.pathname;
+---
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3" aria-label="Absolute Kitchen and Bath home">
+      <img src="/logo-kitchen-and-bath.png" alt="Absolute Kitchen and Bath" class="h-12 w-auto" width="120" height="118" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'text-sm font-medium tracking-wide uppercase transition-colors',
+            path === item.href ? 'text-brand-red' : 'text-charcoal hover:text-brand-red',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <button id="menu-toggle" class="lg:hidden text-charcoal" aria-label="Open menu" aria-expanded="false">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-charcoal/95 backdrop-blur-sm z-40">
+    <div class="flex flex-col items-center justify-center h-full gap-8">
+      {nav.map((item) => (
+        <a href={item.href} class="text-2xl font-medium uppercase tracking-wider text-white hover:text-brand-red">
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  const onScroll = () => {
+    if (!header) return;
+    if (window.scrollY > 40) {
+      header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+    } else {
+      header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  toggle?.addEventListener('click', () => {
+    if (!menu) return;
+    const open = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!open));
+    document.body.style.overflow = open ? '' : 'hidden';
+  });
+</script>

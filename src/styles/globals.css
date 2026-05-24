@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #B0182A;
+  --color-brand-red-dark: #8E1322;
+  --color-charcoal: #1F2123;
+  --color-cream: #F5F3EF;
+  --color-muted: #6B6E71;
+
+  --font-display: "Oswald", "Arial Narrow", "Impact", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background: #ffffff;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > [data-reveal]:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > [data-reveal]:nth-child(2) { transition-delay: 120ms; }
+.reveal-stagger > [data-reveal]:nth-child(3) { transition-delay: 240ms; }
+.reveal-stagger > [data-reveal]:nth-child(4) { transition-delay: 360ms; }
+.reveal-stagger > [data-reveal]:nth-child(5) { transition-delay: 480ms; }
+.reveal-stagger > [data-reveal]:nth-child(6) { transition-delay: 600ms; }
+
+.card-hover {
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -18px rgba(0,0,0,0.35);
+}
+
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.carousel-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { transform: none; transition: opacity 0.3s linear; }
+  .card-hover:hover { transform: none; }
+  html { scroll-behavior: auto; }
+}

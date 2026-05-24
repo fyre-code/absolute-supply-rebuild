@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HyppoForm from '../components/HyppoForm.astro';
+
+const keywords = [
+  'kitchen cabinets Melbourne FL',
+  'custom cabinets',
+  'bath cabinets Melbourne',
+  'Fabuwood cabinets',
+  'Schrock cabinets',
+  'Mantra cabinets',
+  'Northpoint cabinets',
+  'cabinet refacing',
+  'Brevard County cabinets',
+  'kitchen remodel',
+  'cabinet showroom',
+  'Absolute Kitchen and Bath',
+];
+
+const brands = [
+  { name: 'Fabuwood', logo: '/images/brands/fabuwood.png' },
+  { name: 'Schrock', logo: '/images/brands/schrock.png' },
+  { name: 'Mantra', logo: '/images/brands/mantra.png' },
+  { name: 'Northpoint', logo: '/images/brands/northpoint.png' },
+  { name: 'Hardware Resources', logo: '/images/brands/hardware-resources.png' },
+  { name: 'ProKitchen', logo: '/images/brands/prokitchen.png' },
+];
+
+const styles = [
+  { image: '/images/cabinet-style-shaker.jpg', name: 'Shaker' },
+  { image: '/images/cabinet-style-modern.jpg', name: 'Modern' },
+  { image: '/images/cabinet-style-traditional.png', name: 'Traditional' },
+  { image: '/images/cabinet-style-contemporary.png', name: 'Contemporary' },
+];
+---
+<BaseLayout
+  title="Custom Cabinets - Absolute Kitchen and Bath - Melbourne, FL"
+  description="Absolute Kitchen and Bath provides custom kitchen and bath cabinets in Melbourne, FL. Contact us at 321-345-5641."
+  path="/cabinets"
+  keywords={keywords}
+  imageUrl="https://www.absolutekitchenandbath.com/images/kitchen-cabinetry-finished.jpeg"
+  imageAlt="Custom kitchen cabinetry"
+>
+  <section class="relative pt-32 pb-20 bg-charcoal text-white">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/kitchen-cabinetry-finished.jpeg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6">
+      <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
+      <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Cabinets</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/85 normal-case">Custom kitchen and bath cabinetry, designed in 3D before a single drawer is ordered.</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-reveal>
+        <img src="/images/kitchen-cabinetry-finished.jpeg" alt="Custom cabinetry installed in a finished kitchen" class="w-full h-auto" />
+      </div>
+      <div data-reveal>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal">Designed Around Your Space</h2>
+        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">Every kitchen and bath starts with a free in-showroom consultation and a full 3D rendering. We map the layout to how you actually live — storage where you need it, finishes that match the rest of your home.</p>
+        <ul class="mt-6 space-y-3 normal-case text-charcoal">
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Free 3D design consultation</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Full custom and semi-custom lines</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Kitchen and bath cabinetry</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Hardware Resources organizers and accessories</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Professional installation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center" data-reveal>
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Styles</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-display font-bold text-charcoal">Find Your Look</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-muted text-lg normal-case">From clean Shaker lines to bold contemporary finishes, we carry door styles for every kitchen.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5 reveal-stagger">
+        {styles.map((s) => (
+          <div data-reveal class="group bg-white border border-cream overflow-hidden card-hover">
+            <div class="aspect-square overflow-hidden bg-cream">
+              <img src={s.image} alt={`${s.name} cabinet style`} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-display font-semibold text-charcoal">{s.name}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="text-center" data-reveal>
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Our Brands</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-display font-bold text-charcoal">Premium Lines We Carry</h2>
+      </div>
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center reveal-stagger">
+        {brands.map((b) => (
+          <div data-reveal class="flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
+            <img src={b.logo} alt={`${b.name} logo`} class="max-h-16 w-auto object-contain" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-reveal>
+        <img src="/images/kitchen-3d-design-software.png" alt="ProKitchen 3D kitchen design software" class="w-full h-auto bg-white p-6 border border-white" />
+      </div>
+      <div data-reveal>
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">3D Design</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-display font-bold text-charcoal">See It Before You Buy It</h2>
+        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">We use ProKitchen 3D design software to render your full kitchen — exact cabinets, finishes, hardware, and dimensions — before a single order is placed. The complimentary consult includes the rendering.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-reveal>
+        <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Inside Storage</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-display font-bold text-charcoal">Hardware Resources Organizers</h2>
+        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">Drawer dividers, pull-outs, spice racks, tray dividers, and lazy susans — we carry the full Hardware Resources line of cabinet accessories so your storage works as hard as your cabinets look.</p>
+      </div>
+      <div data-reveal>
+        <img src="/images/hardware-resources-organizers.png" alt="Hardware Resources cabinet organizers" class="w-full h-auto" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-3xl px-6" data-reveal>
+      <HyppoForm heading="Request a Cabinet Quote" />
+    </div>
+  </section>
+</BaseLayout>

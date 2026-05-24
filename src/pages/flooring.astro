@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HyppoForm from '../components/HyppoForm.astro';
+
+const keywords = [
+  'flooring Melbourne FL',
+  'luxury vinyl plank',
+  'LVP installation',
+  'tile flooring Melbourne',
+  'hardwood flooring',
+  'flooring installation Brevard County',
+  'kitchen flooring',
+  'bathroom flooring',
+  'waterproof flooring',
+  'flooring showroom Melbourne',
+  'Absolute Kitchen and Bath',
+  'floor installation contractor',
+];
+---
+<BaseLayout
+  title="Flooring Installation - Absolute Kitchen and Bath - Melbourne"
+  description="Absolute Kitchen and Bath provides flooring installation in Melbourne, FL. Contact us at 321-345-5641."
+  path="/flooring"
+  keywords={keywords}
+  imageUrl="https://www.absolutekitchenandbath.com/images/flooring-installation.jpg"
+  imageAlt="Flooring installation"
+>
+  <section class="relative pt-32 pb-20 bg-charcoal text-white">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/flooring-installation.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative mx-auto max-w-7xl px-6">
+      <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
+      <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Flooring</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/85 normal-case">Luxury vinyl, tile, and hardwood — durable surfaces that hold up to Florida living.</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-reveal>
+        <img src="/images/flooring-installation.jpg" alt="Flooring installation in progress" class="w-full h-auto" />
+      </div>
+      <div data-reveal>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal">Built to Last in Florida</h2>
+        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">Florida floors face heat, humidity, sand, and salt. We help you choose materials that look great and stand up to the climate — and we install them right the first time.</p>
+        <ul class="mt-6 space-y-3 normal-case text-charcoal">
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Luxury vinyl plank (LVP) — waterproof, scratch-resistant</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Porcelain and ceramic tile</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Engineered hardwood</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Professional subfloor prep and installation</li>
+          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Free in-home or in-showroom consultations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="mx-auto max-w-3xl px-6" data-reveal>
+      <HyppoForm heading="Request a Flooring Quote" />
+    </div>
+  </section>
+</BaseLayout>
