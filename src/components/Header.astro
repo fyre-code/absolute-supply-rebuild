@@ -9,7 +9,7 @@ const nav = [
 ];
 const path = Astro.url.pathname;
 ---
-<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<header id="site-header" class="sticky lg:static top-0 left-0 right-0 z-50 bg-white shadow-sm">
   <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3" aria-label="Absolute Kitchen and Bath home">
       <img src="/logo-kitchen-and-bath.png" alt="Absolute Kitchen and Bath" class="h-12 w-auto" width="120" height="118" />
@@ -51,17 +51,6 @@ const path = Astro.url.pathname;
   const header = document.getElementById('site-header');
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
-
-  const onScroll = () => {
-    if (!header) return;
-    if (window.scrollY > 40) {
-      header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
-    } else {
-      header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
-    }
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
   toggle?.addEventListener('click', () => {
     if (!menu) return;
