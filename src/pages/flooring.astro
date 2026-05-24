@@ -1,4 +1,5 @@
 ---
+import { media } from '../lib/media';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HyppoForm from '../components/HyppoForm.astro';
 
@@ -22,12 +23,12 @@ const keywords = [
   description="Absolute Kitchen and Bath provides flooring installation in Melbourne, FL. Contact us at 321-345-5641."
   path="/flooring"
   keywords={keywords}
-  imageUrl="https://www.absolutekitchenandbath.com/images/flooring-installation.jpg"
+  imageUrl={media.flooringInstallation}
   imageAlt="Flooring installation"
 >
   <section class="relative pt-20 pb-20 bg-charcoal text-white">
     <div class="absolute inset-0 opacity-30">
-      <img src="/images/flooring-installation.jpg" alt="" class="w-full h-full object-cover" />
+      <img src={media.flooringInstallation} alt="" class="w-full h-full object-cover" />
     </div>
     <div class="relative mx-auto max-w-7xl px-6">
       <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
@@ -39,7 +40,7 @@ const keywords = [
   <section class="py-20 bg-white">
     <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div data-reveal>
-        <img src="/images/flooring-installation.jpg" alt="Flooring installation in progress" class="w-full h-auto" />
+        <img src={media.flooringInstallation} alt="Flooring installation in progress" class="w-full h-auto" />
       </div>
       <div data-reveal>
         <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal">Built to Last in Florida</h2>

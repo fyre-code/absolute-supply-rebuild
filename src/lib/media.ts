@@ -1,0 +1,27 @@
+const BASE = 'https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/216f4b21-2172-428d-8f53-a8d7a75841a4/root';
+
+export const media = {
+  logo: `${BASE}/1779591697969_logo-kitchen-and-bath.png`,
+
+  kitchenShowroomHero: `${BASE}/1779591698850_kitchen-showroom-hero.jpg`,
+  kitchenCabinetryFinished: `${BASE}/1779591700274_kitchen-cabinetry-finished.jpeg`,
+  kitchenCounterQuartz: `${BASE}/1779591702055_kitchen-counter-quartz.jpg`,
+  flooringInstallation: `${BASE}/1779591703174_flooring-installation.jpg`,
+  cabinetShowcase: `${BASE}/1779591703977_cabinet-showcase.jpg`,
+
+  cabinetStyleShaker: `${BASE}/1779591704896_cabinet-style-shaker.jpg`,
+  cabinetStyleModern: `${BASE}/1779591705641_cabinet-style-modern.jpg`,
+  cabinetStyleTraditional: `${BASE}/1779591707435_cabinet-style-traditional.png`,
+  cabinetStyleContemporary: `${BASE}/1779591709544_cabinet-style-contemporary.png`,
+
+  kitchen3dDesign: `${BASE}/1779591710833_kitchen-3d-design-software.png`,
+  hardwareResourcesOrganizers: `${BASE}/1779591712570_hardware-resources-organizers.png`,
+
+  brandFabuwood: `${BASE}/1779591714010_fabuwood.png`,
+  brandSchrock: `${BASE}/1779591715078_schrock.png`,
+  brandMantra: `${BASE}/1779591716077_mantra.png`,
+  brandNorthpoint: `${BASE}/1779591717115_northpoint.png`,
+  brandPompeiiQuartz: `${BASE}/1779591718142_pompeii-quartz.png`,
+  brandHardwareResources: `${BASE}/1779591718840_hardware-resources.png`,
+  brandProkitchen: `${BASE}/1779591719358_prokitchen.png`,
+};

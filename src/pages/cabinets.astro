@@ -1,4 +1,5 @@
 ---
+import { media } from '../lib/media';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HyppoForm from '../components/HyppoForm.astro';
 
@@ -18,19 +19,19 @@ const keywords = [
 ];
 
 const brands = [
-  { name: 'Fabuwood', logo: '/images/brands/fabuwood.png' },
-  { name: 'Schrock', logo: '/images/brands/schrock.png' },
-  { name: 'Mantra', logo: '/images/brands/mantra.png' },
-  { name: 'Northpoint', logo: '/images/brands/northpoint.png' },
-  { name: 'Hardware Resources', logo: '/images/brands/hardware-resources.png' },
-  { name: 'ProKitchen', logo: '/images/brands/prokitchen.png' },
+  { name: 'Fabuwood', logo: media.brandFabuwood },
+  { name: 'Schrock', logo: media.brandSchrock },
+  { name: 'Mantra', logo: media.brandMantra },
+  { name: 'Northpoint', logo: media.brandNorthpoint },
+  { name: 'Hardware Resources', logo: media.brandHardwareResources },
+  { name: 'ProKitchen', logo: media.brandProkitchen },
 ];
 
 const styles = [
-  { image: '/images/cabinet-style-shaker.jpg', name: 'Shaker' },
-  { image: '/images/cabinet-style-modern.jpg', name: 'Modern' },
-  { image: '/images/cabinet-style-traditional.png', name: 'Traditional' },
-  { image: '/images/cabinet-style-contemporary.png', name: 'Contemporary' },
+  { image: media.cabinetStyleShaker, name: 'Shaker' },
+  { image: media.cabinetStyleModern, name: 'Modern' },
+  { image: media.cabinetStyleTraditional, name: 'Traditional' },
+  { image: media.cabinetStyleContemporary, name: 'Contemporary' },
 ];
 ---
 <BaseLayout
@@ -38,12 +39,12 @@ const styles = [
   description="Absolute Kitchen and Bath provides custom kitchen and bath cabinets in Melbourne, FL. Contact us at 321-345-5641."
   path="/cabinets"
   keywords={keywords}
-  imageUrl="https://www.absolutekitchenandbath.com/images/kitchen-cabinetry-finished.jpeg"
+  imageUrl={media.kitchenCabinetryFinished}
   imageAlt="Custom kitchen cabinetry"
 >
   <section class="relative pt-20 pb-20 bg-charcoal text-white">
     <div class="absolute inset-0 opacity-30">
-      <img src="/images/kitchen-cabinetry-finished.jpeg" alt="" class="w-full h-full object-cover" />
+      <img src={media.kitchenCabinetryFinished} alt="" class="w-full h-full object-cover" />
     </div>
     <div class="relative mx-auto max-w-7xl px-6">
       <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
@@ -55,7 +56,7 @@ const styles = [
   <section class="py-20 bg-white">
     <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div data-reveal>
-        <img src="/images/kitchen-cabinetry-finished.jpeg" alt="Custom cabinetry installed in a finished kitchen" class="w-full h-auto" />
+        <img src={media.kitchenCabinetryFinished} alt="Custom cabinetry installed in a finished kitchen" class="w-full h-auto" />
       </div>
       <div data-reveal>
         <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal">Designed Around Your Space</h2>
@@ -112,7 +113,7 @@ const styles = [
   <section class="py-20 bg-cream">
     <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div data-reveal>
-        <img src="/images/kitchen-3d-design-software.png" alt="ProKitchen 3D kitchen design software" class="w-full h-auto bg-white p-6 border border-white" />
+        <img src={media.kitchen3dDesign} alt="ProKitchen 3D kitchen design software" class="w-full h-auto bg-white p-6 border border-white" />
       </div>
       <div data-reveal>
         <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">3D Design</span>
@@ -130,7 +131,7 @@ const styles = [
         <p class="mt-5 text-muted text-lg normal-case leading-relaxed">Drawer dividers, pull-outs, spice racks, tray dividers, and lazy susans — we carry the full Hardware Resources line of cabinet accessories so your storage works as hard as your cabinets look.</p>
       </div>
       <div data-reveal>
-        <img src="/images/hardware-resources-organizers.png" alt="Hardware Resources cabinet organizers" class="w-full h-auto" />
+        <img src={media.hardwareResourcesOrganizers} alt="Hardware Resources cabinet organizers" class="w-full h-auto" />
       </div>
     </div>
   </section>

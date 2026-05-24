@@ -1,29 +1,30 @@
 ---
+import { media } from '../lib/media';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroCarousel from '../components/HeroCarousel.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 
 const slides = [
   {
-    image: '/images/kitchen-showroom-hero.jpg',
+    image: media.kitchenShowroomHero,
     alt: 'Modern kitchen showroom with custom cabinetry',
     headline: 'Kitchens & Baths Built Around You',
     sub: 'Custom cabinets, premium countertops, and flooring — designed and installed by a Melbourne, FL team that takes craft seriously.',
   },
   {
-    image: '/images/kitchen-cabinetry-finished.jpeg',
+    image: media.kitchenCabinetryFinished,
     alt: 'Finished custom kitchen cabinetry',
     headline: 'Premium Cabinetry, Local Service',
     sub: 'Fabuwood, Schrock, Mantra, Northpoint — top brands, expert design, complimentary 3D consultations.',
   },
   {
-    image: '/images/kitchen-counter-quartz.jpg',
+    image: media.kitchenCounterQuartz,
     alt: 'Quartz kitchen countertop',
     headline: 'Countertops That Define the Room',
     sub: 'Pompeii Quartz and natural stone, fabricated and installed with precision.',
   },
   {
-    image: '/images/cabinet-showcase.jpg',
+    image: media.cabinetShowcase,
     alt: 'Cabinet showcase from Absolute Kitchen and Bath showroom',
     headline: 'Walk the Showroom',
     sub: 'Real samples, real slabs, real installs — see what your kitchen could look like before you commit.',
@@ -50,7 +51,7 @@ const keywords = [
   description="Absolute Kitchen and Bath provides cabinets, flooring, and countertops in Melbourne, FL. Contact us at 321-345-5641."
   path="/"
   keywords={keywords}
-  imageUrl="https://www.absolutekitchenandbath.com/images/kitchen-showroom-hero.jpg"
+  imageUrl={media.kitchenShowroomHero}
   imageAlt="Absolute Kitchen and Bath showroom"
 >
   <HeroCarousel slides={slides} />
@@ -66,21 +67,21 @@ const keywords = [
       <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
         <ServiceCard
           href="/cabinets"
-          image="/images/kitchen-cabinetry-finished.jpeg"
+          image={media.kitchenCabinetryFinished}
           alt="Custom kitchen cabinetry"
           title="Cabinets"
           description="Custom kitchen and bath cabinetry from Fabuwood, Schrock, Mantra, and Northpoint. Complimentary 3D design."
         />
         <ServiceCard
           href="/countertops"
-          image="/images/kitchen-counter-quartz.jpg"
+          image={media.kitchenCounterQuartz}
           alt="Quartz countertop"
           title="Countertops"
           description="Pompeii Quartz and natural stone. Precision-fabricated edges, expert templating and installation."
         />
         <ServiceCard
           href="/flooring"
-          image="/images/flooring-installation.jpg"
+          image={media.flooringInstallation}
           alt="Flooring installation"
           title="Flooring"
           description="Luxury vinyl plank, tile, and hardwood. Durable, beautiful, and installed by professionals."
@@ -92,7 +93,7 @@ const keywords = [
   <section class="py-24 bg-white">
     <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
       <div data-reveal>
-        <img src="/images/kitchen-showroom-hero.jpg" alt="Kitchen showroom in Melbourne, FL" class="w-full h-auto object-cover" />
+        <img src={media.kitchenShowroomHero} alt="Kitchen showroom in Melbourne, FL" class="w-full h-auto object-cover" />
       </div>
       <div data-reveal>
         <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Why Us</span>

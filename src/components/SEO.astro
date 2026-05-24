@@ -1,4 +1,6 @@
 ---
+import { media } from '../lib/media';
+
 interface Props {
   title: string;
   description: string;
@@ -13,7 +15,7 @@ const {
   description,
   path,
   keywords,
-  imageUrl = 'https://www.absolutekitchenandbath.com/logo-kitchen-and-bath.png',
+  imageUrl = media.logo,
   imageAlt = 'Absolute Kitchen and Bath logo',
 } = Astro.props;
 
