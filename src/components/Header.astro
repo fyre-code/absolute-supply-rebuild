@@ -39,14 +39,21 @@ const path = Astro.url.pathname;
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-charcoal/95 backdrop-blur-sm z-40">
-    <div class="flex flex-col items-center justify-center h-full gap-8">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-cream bg-white">
+    <nav class="flex flex-col py-2">
       {nav.map((item) => (
-        <a href={item.href} data-mobile-link class="text-2xl font-medium uppercase tracking-wider text-white hover:text-brand-red">
+        <a
+          href={item.href}
+          data-mobile-link
+          class:list={[
+            'px-6 py-3 text-base font-medium uppercase tracking-wide transition-colors',
+            path === item.href ? 'text-brand-red' : 'text-charcoal hover:text-brand-red',
+          ]}
+        >
           {item.label}
         </a>
       ))}
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -65,7 +72,6 @@ const path = Astro.url.pathname;
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     iconOpen?.classList.toggle('hidden', open);
     iconClose?.classList.toggle('hidden', !open);
-    document.body.style.overflow = open ? 'hidden' : '';
   };
 
   toggle?.addEventListener('click', () => {
