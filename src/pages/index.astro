@@ -93,38 +93,47 @@ const keywords = [
   <section class="relative py-24">
     <div class="absolute inset-0">
       <img src={media.kitchenShowroomHero} alt="" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-charcoal/55"></div>
+      <div class="absolute inset-0 bg-charcoal/75"></div>
     </div>
     <div class="relative mx-auto max-w-6xl px-6">
       <div data-reveal class="text-center text-white">
         <h2 class="text-4xl md:text-5xl font-display font-bold">Why Us</h2>
         <p class="mt-5 max-w-3xl mx-auto text-white/90 text-lg normal-case leading-relaxed">Absolute Supply is your trusted partner in remodels and renovations, offering high-quality cabinets, countertops, vinyl plank flooring, and cabinet hardware. We deliver exceptional customer service, provide innovative and stylish products, and promote sustainability in the industry. Our goal is to empower you to transform your spaces into dream homes, with quality and value at the forefront of every project.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 reveal-stagger">
-        <div data-reveal class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center text-white">
-          <img src={media.iconLocallyOwned} alt="" class="mx-auto w-32 h-32" width="128" height="128" loading="lazy" />
+  <section class="py-24 bg-white">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-stagger">
+        <div data-reveal class="p-8 text-center text-charcoal">
+          <div class="mx-auto w-32 h-32 flex items-center justify-center"><img src={media.iconLocallyOwned} alt="" class="w-full h-full scale-125 object-contain" width="160" height="160" loading="lazy" /></div>
           <h3 class="mt-3 text-xl font-display font-bold">Locally Owned</h3>
-          <p class="mt-2 text-white/85 normal-case leading-relaxed">For nearly two decades, our family has proudly called the vibrant Space Coast our home. We have established deep roots in this community and are wholeheartedly dedicated to delivering superior products at prices that won't break the bank.</p>
+          <p class="mt-2 text-muted normal-case leading-relaxed">For nearly two decades, our family has proudly called the vibrant Space Coast our home. We have established deep roots in this community and are wholeheartedly dedicated to delivering superior products at prices that won't break the bank.</p>
         </div>
 
-        <div data-reveal class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center text-white">
-          <img src={media.iconQualityProducts} alt="" class="mx-auto w-32 h-32" width="128" height="128" loading="lazy" />
+        <div data-reveal class="p-8 text-center text-charcoal">
+          <div class="mx-auto w-32 h-32 flex items-center justify-center"><img src={media.iconQualityProducts} alt="" class="w-full h-full object-contain" width="160" height="160" loading="lazy" /></div>
           <h3 class="mt-3 text-xl font-display font-bold">Quality Products</h3>
-          <p class="mt-2 text-white/85 normal-case leading-relaxed">We take immense pride in our selection of top-notch cabinet, and flooring products. What sets us apart is that we don't just sell these products; we personally use them in our own homes and businesses, ensuring that we offer nothing but the best to our valued customers</p>
+          <p class="mt-2 text-muted normal-case leading-relaxed">We take immense pride in our selection of top-notch cabinet, and flooring products. What sets us apart is that we don't just sell these products; we personally use them in our own homes and businesses, ensuring that we offer nothing but the best to our valued customers</p>
         </div>
 
-        <div data-reveal class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center text-white">
-          <img src={media.iconCustomerService} alt="" class="mx-auto w-32 h-32" width="128" height="128" loading="lazy" />
+        <div data-reveal class="p-8 text-center text-charcoal">
+          <div class="mx-auto w-32 h-32 flex items-center justify-center"><img src={media.iconCustomerService} alt="" class="w-full h-full scale-125 object-contain" width="160" height="160" loading="lazy" /></div>
           <h3 class="mt-3 text-xl font-display font-bold">Customer Service</h3>
-          <p class="mt-2 text-white/85 normal-case leading-relaxed">We are here for you, our friends and neighbors in the beautiful Space Coast. Whether you have a question, need assistance, or want to explore our wide range of products, we're just a phone call or an email away. Don't hesitate to reach out to us—we are eager and ready to provide you with exceptional service and support!</p>
+          <p class="mt-2 text-muted normal-case leading-relaxed">We are here for you, our friends and neighbors in the beautiful Space Coast. Whether you have a question, need assistance, or want to explore our wide range of products, we're just a phone call or an email away. Don't hesitate to reach out to us—we are eager and ready to provide you with exceptional service and support!</p>
         </div>
 
-        <div data-reveal class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 text-center text-white">
-          <img src={media.iconDesignServices} alt="" class="mx-auto w-32 h-32" width="128" height="128" loading="lazy" />
+        <div data-reveal class="p-8 text-center text-charcoal">
+          <div class="mx-auto w-32 h-32 flex items-center justify-center"><img src={media.iconDesignServices} alt="" class="w-full h-full object-contain" width="160" height="160" loading="lazy" /></div>
           <h3 class="mt-3 text-xl font-display font-bold">Design Services</h3>
-          <p class="mt-2 text-white/85 normal-case leading-relaxed">Transforming your kitchen or bath project from imagination to reality is made easier with our 3D design service. Visualize your vision in stunning detail before making any commitments. What's more, our estimates are always provided at no cost to you. Take the first step towards your dream space.</p>
+          <p class="mt-2 text-muted normal-case leading-relaxed">Transforming your kitchen or bath project from imagination to reality is made easier with our 3D design service. Visualize your vision in stunning detail before making any commitments. What's more, our estimates are always provided at no cost to you. Take the first step towards your dream space.</p>
         </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center gap-4" data-reveal>
+        <a href="https://hyppohq.io/f/absolute-supply/contact-absolute-kitchen-and-bath?theme=light" class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Contact Us</a>
+        <a href="tel:3213455641" class="inline-block w-64 text-center border border-charcoal hover:bg-charcoal hover:text-white text-charcoal px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Call 321-345-5641</a>
       </div>
     </div>
   </section>

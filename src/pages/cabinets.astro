@@ -18,12 +18,10 @@ const keywords = [
 ];
 
 const brands = [
-  { name: 'Fabuwood', logo: media.brandFabuwood },
-  { name: 'Schrock', logo: media.brandSchrock },
-  { name: 'Mantra', logo: media.brandMantra },
-  { name: 'Northpoint', logo: media.brandNorthpoint },
-  { name: 'Hardware Resources', logo: media.brandHardwareResources },
-  { name: 'ProKitchen', logo: media.brandProkitchen },
+  { name: 'Northpoint', logo: media.logoNorthpoint, swatches: media.brandNorthpointSwatches, href: 'https://www.hardwareresources.com/northpoint-cabinets' },
+  { name: 'Fabuwood', logo: media.logoFabuwood, swatches: media.brandFabuwoodSwatches, href: 'https://www.fabuwood.com/doors/' },
+  { name: 'Schrock', logo: media.logoSchrock, swatches: media.brandSchrockSwatches, href: 'https://www.schrock.com/products' },
+  { name: 'Mantra', logo: media.logoMantra, swatches: media.brandMantraSwatches, href: 'https://www.mantracabinets.com/wp-content/uploads/9301.MAN_FullLine.pdf' },
 ];
 
 const styles = [
@@ -103,10 +101,18 @@ const styles = [
         <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Our Brands</span>
         <h2 class="mt-3 text-3xl md:text-4xl font-display font-bold text-charcoal">Premium Lines We Carry</h2>
       </div>
-      <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center reveal-stagger">
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 reveal-stagger">
         {brands.map((b) => (
-          <div data-reveal class="flex items-center justify-center h-20 grayscale hover:grayscale-0 transition-all">
-            <img src={b.logo} alt={`${b.name} logo`} class="max-h-16 w-auto object-contain" loading="lazy" />
+          <div data-reveal class="flex flex-col items-center text-center h-full">
+            <div class="h-32 flex items-center justify-center">
+              <img src={b.logo} alt={`${b.name} logo`} class="max-h-32 w-auto object-contain" loading="lazy" />
+            </div>
+            <div class="mt-5 h-56 w-full flex items-center justify-center">
+              <img src={b.swatches} alt={`${b.name} cabinet finish swatches`} class="max-h-56 w-full object-contain" loading="lazy" />
+            </div>
+            <a href={b.href} target="_blank" rel="noopener noreferrer" class="mt-auto pt-6 inline-block">
+              <span class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from {b.name}</span>
+            </a>
           </div>
         ))}
       </div>

@@ -23,11 +23,17 @@ export const media = {
   kitchen3dDesign: `${BASE}/1779591710833_kitchen-3d-design-software.png`,
   hardwareResourcesOrganizers: `${BASE}/1779591712570_hardware-resources-organizers.png`,
 
-  brandFabuwood: `${BASE}/1779591714010_fabuwood.png`,
-  brandSchrock: `${BASE}/1779591715078_schrock.png`,
-  brandMantra: `${BASE}/1779591716077_mantra.png`,
-  brandNorthpoint: `${BASE}/1779591717115_northpoint.png`,
-  brandPompeiiQuartz: `${BASE}/1779591718142_pompeii-quartz.png`,
+  brandFabuwoodSwatches: `${BASE}/1779591714010_fabuwood.png`,
+  brandSchrockSwatches: `${BASE}/1779591715078_schrock.png`,
+  brandMantraSwatches: `${BASE}/1779591716077_mantra.png`,
+  brandNorthpointSwatches: `${BASE}/1779591717115_northpoint.png`,
+  brandPompeiiQuartzSwatches: `${BASE}/1779591718142_pompeii-quartz.png`,
   brandHardwareResources: `${BASE}/1779591718840_hardware-resources.png`,
   brandProkitchen: `${BASE}/1779591719358_prokitchen.png`,
+
+  logoFabuwood: `${BASE}/1779743840908_fabuwood-logo-dark.png`,
+  logoMantra: `${BASE}/1779743182628_mantra-logo.png`,
+  logoNorthpoint: `${BASE}/1779743184241_northpoint-logo.png`,
+  logoSchrock: `${BASE}/1779743185659_schrock-logo.png`,
+  logoPompeiiQuartz: `${BASE}/1779743462554_pompeii-logo-transparent.png`,
 };
