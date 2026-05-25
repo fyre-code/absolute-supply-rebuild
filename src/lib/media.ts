@@ -11,7 +11,7 @@ export const media = {
 
   kitchenShowroomHero: `${BASE}/1779591698850_kitchen-showroom-hero.jpg`,
   kitchenCabinetryFinished: `${BASE}/1779591700274_kitchen-cabinetry-finished.jpeg`,
-  kitchenCounterQuartz: `${BASE}/1779591702055_kitchen-counter-quartz.jpg`,
+  kitchenCounterQuartz: `${BASE}/1779746219661_countertop-edge-profile-closeup.jpg`,
   flooringInstallation: `${BASE}/1779591703174_flooring-installation.jpg`,
   cabinetShowcase: `${BASE}/1779591703977_cabinet-showcase.jpg`,
 
@@ -36,7 +36,11 @@ export const media = {
   logoNorthpoint: `${BASE}/1779743184241_northpoint-logo.png`,
   logoSchrock: `${BASE}/1779743185659_schrock-logo.png`,
   logoPompeiiQuartz: `${BASE}/1779743462554_pompeii-logo-transparent.png`,
-  logoShaw: `${BASE}/1779745707246_shaw-logo.png`,
+  logoShaw: `${BASE}/1779746533441_shaw-logo-trimmed.png`,
   logoAudacity: `${BASE}/1779745708740_audacity-logo.webp`,
   logoHappyFeet: `${BASE}/1779745710256_happy-logo.png`,
+
+  photoShaw: `${BASE}/1779746630774_shaw-floor.jpg`,
+  photoAudacity: `${BASE}/1779746632502_audacity-floor.png`,
+  photoHappyFeet: `${BASE}/1779746634653_happy-floor.png`,
 };
