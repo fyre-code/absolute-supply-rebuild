@@ -36,4 +36,7 @@ export const media = {
   logoNorthpoint: `${BASE}/1779743184241_northpoint-logo.png`,
   logoSchrock: `${BASE}/1779743185659_schrock-logo.png`,
   logoPompeiiQuartz: `${BASE}/1779743462554_pompeii-logo-transparent.png`,
+  logoShaw: `${BASE}/1779745707246_shaw-logo.png`,
+  logoAudacity: `${BASE}/1779745708740_audacity-logo.webp`,
+  logoHappyFeet: `${BASE}/1779745710256_happy-logo.png`,
 };

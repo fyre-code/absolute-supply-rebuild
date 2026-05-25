@@ -3,36 +3,30 @@ import { media } from '../lib/media';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const keywords = [
-  'flooring Melbourne FL',
-  'luxury vinyl plank',
-  'LVP installation',
-  'tile flooring Melbourne',
-  'hardwood flooring',
-  'flooring installation Brevard County',
-  'kitchen flooring',
-  'bathroom flooring',
-  'waterproof flooring',
-  'flooring showroom Melbourne',
-  'Absolute Kitchen and Bath',
-  'floor installation contractor',
+  'luxury vinyl plank flooring Melbourne FL',
+  'Shaw flooring Melbourne',
+  'Audacity vinyl plank',
+  'Happy Feet International flooring',
+  'vinyl plank flooring Brevard County',
+  'Absolute Supply Company',
+  'LVP Space Coast',
 ];
 ---
 <BaseLayout
-  title="Flooring Installation - Absolute Kitchen and Bath - Melbourne"
-  description="Absolute Kitchen and Bath provides flooring installation in Melbourne, FL. Contact us at 321-345-5641."
+  title="Luxury Vinyl Plank Flooring - Absolute Supply Company - Melbourne, FL"
+  description="Shaw, Audacity, and Happy Feet International vinyl plank flooring at Absolute Supply Company in Melbourne, FL. Call 321-345-5641."
   path="/flooring"
   keywords={keywords}
   imageUrl={media.flooringInstallation}
-  imageAlt="Flooring installation"
+  imageAlt="Luxury vinyl plank flooring"
 >
   <section class="relative pt-20 pb-20 bg-charcoal text-white">
     <div class="absolute inset-0 opacity-30">
       <img src={media.flooringInstallation} alt="" class="w-full h-full object-cover" />
     </div>
     <div class="relative mx-auto max-w-7xl px-6 text-center">
-      <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
-      <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Flooring</h1>
-      <p class="mt-4 max-w-2xl mx-auto text-lg text-white/85 normal-case">Luxury vinyl, tile, and hardwood — durable surfaces that hold up to Florida living.</p>
+      <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Luxury Vinyl Plank Flooring</h1>
+      <p class="mt-6 max-w-3xl mx-auto text-lg text-white/90 normal-case leading-relaxed">At Absolute Supply, we take pride in offering an extensive range of vinyl plank flooring products from renowned brands such as Shaw, Happy Feet International, and Audacity. With our exceptional selection, unbeatable quality, and unwavering commitment to customer satisfaction, we are your go-to destination for all your vinyl plank flooring needs.</p>
       <div class="mt-8 flex flex-col items-center gap-4">
         <a href="https://hyppohq.io/f/absolute-supply/contact-absolute-kitchen-and-bath?theme=light" class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Contact Us</a>
         <a href="tel:3213455641" class="inline-block w-64 text-center bg-white hover:bg-cream text-charcoal px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Call 321-345-5641</a>
@@ -41,20 +35,26 @@ const keywords = [
   </section>
 
   <section class="py-20 bg-white">
-    <div class="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div data-reveal>
-        <img src={media.flooringInstallation} alt="Flooring installation in progress" class="w-full h-auto" />
+    <div class="mx-auto max-w-4xl px-6 space-y-16">
+      <div data-reveal class="text-center">
+        <div class="h-24 flex items-center justify-center">
+          <img src={media.logoShaw} alt="Shaw logo" class="max-h-24 w-auto object-contain" loading="lazy" />
+        </div>
+        <p class="mt-6 text-muted text-lg normal-case leading-relaxed">Shaw, a leader in the flooring industry, brings their expertise and innovation to every product they create. Their vinyl plank flooring options showcase remarkable craftsmanship, durability, and stunning designs that effortlessly elevate any space. Whether you prefer a classic wood look or a contemporary style, Shaw's vinyl plank flooring offers an array of options to suit your aesthetic preferences and lifestyle.</p>
       </div>
-      <div data-reveal>
-        <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal text-center">Built to Last in Florida</h2>
-        <p class="mt-5 text-muted text-lg normal-case leading-relaxed">Florida floors face heat, humidity, sand, and salt. We help you choose materials that look great and stand up to the climate — and we install them right the first time.</p>
-        <ul class="mt-6 space-y-3 normal-case text-charcoal">
-          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Luxury vinyl plank (LVP) — waterproof, scratch-resistant</li>
-          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Porcelain and ceramic tile</li>
-          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Engineered hardwood</li>
-          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Professional subfloor prep and installation</li>
-          <li class="flex gap-3"><span class="text-brand-red font-bold">✓</span> Free in-home or in-showroom consultations</li>
-        </ul>
+
+      <div data-reveal class="text-center">
+        <div class="h-24 flex items-center justify-center">
+          <img src={media.logoAudacity} alt="Audacity logo" class="max-h-24 w-auto object-contain" loading="lazy" />
+        </div>
+        <p class="mt-6 text-muted text-lg normal-case leading-relaxed">Audacity, as the name suggests, pushes the boundaries of what vinyl plank flooring can achieve. Their innovative engineering creates flooring that is not only visually stunning but also exceptionally resilient. Audacity's unique construction ensures superior water resistance, making it ideal for areas prone to moisture, such as kitchens and bathrooms. Experience the ultimate peace of mind with Audacity's remarkable vinyl plank flooring.</p>
+      </div>
+
+      <div data-reveal class="text-center">
+        <div class="h-24 flex items-center justify-center">
+          <img src={media.logoHappyFeet} alt="Happy Feet International logo" class="max-h-24 w-auto object-contain" loading="lazy" />
+        </div>
+        <p class="mt-6 text-muted text-lg normal-case leading-relaxed">Happy Feet International is dedicated to delivering vinyl plank flooring that combines beauty and functionality. Their meticulous attention to detail results in luxurious, realistic wood and stone textures, while their commitment to performance ensures that their flooring stands up to the demands of daily life. With Happy Feet International, you can enjoy the beauty of natural materials without compromising on durability and easy maintenance.</p>
       </div>
     </div>
   </section>
