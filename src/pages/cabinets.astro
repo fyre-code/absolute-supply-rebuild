@@ -1,7 +1,6 @@
 ---
 import { media } from '../lib/media';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HyppoForm from '../components/HyppoForm.astro';
 
 const keywords = [
   'kitchen cabinets Melbourne FL',
@@ -50,6 +49,10 @@ const styles = [
       <span class="text-brand-red font-semibold text-sm uppercase tracking-widest">Service</span>
       <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Cabinets</h1>
       <p class="mt-4 max-w-2xl text-lg text-white/85 normal-case">Custom kitchen and bath cabinetry, designed in 3D before a single drawer is ordered.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="tel:3213455641" class="inline-block bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Call 321-345-5641</a>
+        <a href="https://hyppohq.io/f/absolute-supply/contact-absolute-kitchen-and-bath?theme=light" class="inline-block bg-white hover:bg-cream text-charcoal px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Contact Us</a>
+      </div>
     </div>
   </section>
 
@@ -136,9 +139,4 @@ const styles = [
     </div>
   </section>
 
-  <section class="py-20 bg-white">
-    <div class="mx-auto max-w-3xl px-6" data-reveal>
-      <HyppoForm heading="Request a Cabinet Quote" />
-    </div>
-  </section>
 </BaseLayout>
