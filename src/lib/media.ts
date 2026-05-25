@@ -4,6 +4,11 @@ export const media = {
   logo: `${BASE}/1779591697969_logo-kitchen-and-bath.png`,
   logoOnBlack: `${BASE}/1779712084811_logo-kitchen-and-bath-on-black.png`,
 
+  iconLocallyOwned: `${BASE}/1779740805935_locally-owned-icon.png`,
+  iconQualityProducts: `${BASE}/1779740806712_quality-products-icon.png`,
+  iconCustomerService: `${BASE}/1779740804033_customer-service-icon.png`,
+  iconDesignServices: `${BASE}/1779740805093_design-services-icon.png`,
+
   kitchenShowroomHero: `${BASE}/1779591698850_kitchen-showroom-hero.jpg`,
   kitchenCabinetryFinished: `${BASE}/1779591700274_kitchen-cabinetry-finished.jpeg`,
   kitchenCounterQuartz: `${BASE}/1779591702055_kitchen-counter-quartz.jpg`,
