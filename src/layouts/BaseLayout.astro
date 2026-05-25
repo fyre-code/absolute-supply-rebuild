@@ -15,6 +15,7 @@ interface Props {
 }
 
 const { title, description, path, keywords, imageUrl, imageAlt } = Astro.props;
+const showChatWidget = !path.startsWith('/privacy-policy') && !path.startsWith('/terms-of-service');
 ---
 <!doctype html>
 <html lang="en">
@@ -46,5 +47,15 @@ const { title, description, path, keywords, imageUrl, imageAlt } = Astro.props;
     <script>
       import '../scripts/reveal.ts';
     </script>
+    {showChatWidget && (
+      <script is:inline define:vars={{ src: 'https://hyppohq.io/api/v1/widgets/embed/absolute-supply/let-s-chat' }}>
+        setTimeout(() => {
+          const s = document.createElement('script');
+          s.src = src;
+          s.async = true;
+          document.body.appendChild(s);
+        }, 3000);
+      </script>
+    )}
   </body>
 </html>
