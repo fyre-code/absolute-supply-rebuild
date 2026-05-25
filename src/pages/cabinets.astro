@@ -69,10 +69,15 @@ const brands = [
               <img src={b.swatches} alt={`${b.name} cabinet finish swatches`} class="max-h-48 md:max-h-56 w-full object-contain" loading="lazy" />
             </div>
             <a href={b.href} target="_blank" rel="noopener noreferrer" class="mt-2 md:mt-auto md:pt-6 inline-block">
-              <span class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from {b.name}</span>
+              <span class="inline-block w-64 text-center bg-charcoal hover:bg-black text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from {b.name}</span>
             </a>
           </div>
         ))}
+      </div>
+
+      <div class="mt-12 flex flex-col items-center gap-4" data-reveal>
+        <a href="https://hyppohq.io/f/absolute-supply/contact-absolute-kitchen-and-bath?theme=light" class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Contact Us</a>
+        <a href="tel:3213455641" class="inline-block w-64 text-center border border-charcoal hover:bg-charcoal hover:text-white text-charcoal px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Call 321-345-5641</a>
       </div>
     </div>
   </section>
