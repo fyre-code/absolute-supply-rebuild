@@ -43,4 +43,14 @@ export const media = {
   photoShaw: `${BASE}/1779746630774_shaw-floor.jpg`,
   photoAudacity: `${BASE}/1779746632502_audacity-floor.png`,
   photoHappyFeet: `${BASE}/1779746634653_happy-floor.png`,
+
+  flooringHero1: `${BASE}/1779747222726_flooring-hero-1-plant-bench.jpg`,
+  flooringHero2: `${BASE}/1779747224560_flooring-hero-2-white-kitchen.jpg`,
+  flooringHero3: `${BASE}/1779747226241_flooring-hero-3-dark-vinyl-kitchen.jpg`,
+
+  cabinetsHero2: `${BASE}/1779747819643_bath-vanity-installation.jpg`,
+  cabinetsHero3: `${BASE}/1779747822114_cabinet-hardware-detail.jpg`,
+
+  countertopsHero1: `${BASE}/1779748703346_quartz-kitchen-island-close-up.png`,
+  countertopsHero2: `${BASE}/1779748706192_bathroom-vanity-with-stone-countertop.png`,
 };

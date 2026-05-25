@@ -25,13 +25,18 @@ const keywords = [
   imageUrl={media.kitchenCounterQuartz}
   imageAlt="Quartz countertop installation"
 >
-  <section class="relative pt-20 pb-20 bg-charcoal text-white">
-    <div class="absolute inset-0 opacity-30">
-      <img src={media.kitchenCounterQuartz} alt="" class="w-full h-full object-cover" />
+  <section class="relative pt-20 pb-24 bg-charcoal text-white overflow-hidden">
+    <div id="countertops-hero-bg" class="absolute inset-0">
+      <img src={media.countertopsHero1} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover" />
+      <img src={media.countertopsHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-charcoal/55"></div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+      <button data-countertops-dot="0" aria-label="Slide 1" class="w-8 h-3 rounded-full transition-all bg-brand-red"></button>
+      <button data-countertops-dot="1" aria-label="Slide 2" class="w-3 h-3 rounded-full transition-all bg-white/50 hover:bg-white"></button>
     </div>
     <div class="relative mx-auto max-w-7xl px-6 text-center">
       <h1 class="mt-2 text-5xl md:text-6xl font-display font-bold">Countertops</h1>
-      <p class="mt-4 max-w-2xl mx-auto text-lg text-white/85 normal-case">Quartz and natural stone, precision-templated and expertly installed.</p>
       <div class="mt-8 flex flex-col items-center gap-4">
         <a href="https://hyppohq.io/f/absolute-supply/contact-absolute-kitchen-and-bath?theme=light" class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Contact Us</a>
         <a href="tel:3213455641" class="inline-block w-64 text-center bg-white hover:bg-cream text-charcoal px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Call 321-345-5641</a>
@@ -54,4 +59,32 @@ const keywords = [
     </div>
   </section>
 
+
+<script>
+  const bg = document.getElementById('countertops-hero-bg');
+  if (bg) {
+    const slides = bg.querySelectorAll<HTMLImageElement>('.carousel-slide');
+    const dots = document.querySelectorAll<HTMLButtonElement>('[data-countertops-dot]');
+    let current = 0;
+    let timer: number | undefined;
+
+    const go = (i: number) => {
+      slides[current].classList.remove('is-active');
+      dots[current]?.classList.replace('bg-brand-red', 'bg-white/50');
+      dots[current]?.classList.remove('w-8');
+      dots[current]?.classList.add('w-3');
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      dots[current]?.classList.replace('bg-white/50', 'bg-brand-red');
+      dots[current]?.classList.remove('w-3');
+      dots[current]?.classList.add('w-8');
+    };
+
+    const start = () => { timer = window.setInterval(() => go(current + 1), 5000); };
+    const stop = () => { if (timer) window.clearInterval(timer); };
+
+    dots.forEach((d, i) => d.addEventListener('click', () => { stop(); go(i); start(); }));
+    start();
+  }
+</script>
 </BaseLayout>
