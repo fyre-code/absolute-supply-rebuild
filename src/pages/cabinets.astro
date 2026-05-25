@@ -60,15 +60,15 @@ const brands = [
         <h2 class="mt-3 text-3xl md:text-4xl font-display font-bold text-charcoal">Premium Lines We Carry</h2>
       </div>
       <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 reveal-stagger">
-        {brands.map((b) => (
-          <div data-reveal class="flex flex-col items-center text-center h-full">
-            <div class="h-32 flex items-center justify-center">
-              <img src={b.logo} alt={`${b.name} logo`} class="max-h-32 w-auto object-contain" loading="lazy" />
+        {brands.map((b, i) => (
+          <div data-reveal class:list={['flex flex-col items-center text-center h-full pb-8 md:pb-0', i < brands.length - 1 && 'border-b border-charcoal/15 md:border-0']}>
+            <div class="h-24 md:h-32 flex items-center justify-center">
+              <img src={b.logo} alt={`${b.name} logo`} class="max-h-24 md:max-h-32 w-auto object-contain" loading="lazy" />
             </div>
-            <div class="mt-5 h-56 w-full flex items-center justify-center">
-              <img src={b.swatches} alt={`${b.name} cabinet finish swatches`} class="max-h-56 w-full object-contain" loading="lazy" />
+            <div class="mt-2 md:mt-5 h-48 md:h-56 w-full flex items-center justify-center">
+              <img src={b.swatches} alt={`${b.name} cabinet finish swatches`} class="max-h-48 md:max-h-56 w-full object-contain" loading="lazy" />
             </div>
-            <a href={b.href} target="_blank" rel="noopener noreferrer" class="mt-auto pt-6 inline-block">
+            <a href={b.href} target="_blank" rel="noopener noreferrer" class="mt-2 md:mt-auto md:pt-6 inline-block">
               <span class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from {b.name}</span>
             </a>
           </div>
