@@ -2,6 +2,7 @@ const BASE = 'https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/
 
 export const media = {
   logo: `${BASE}/1779591697969_logo-kitchen-and-bath.png`,
+  logoOnBlack: `${BASE}/1779712084811_logo-kitchen-and-bath-on-black.png`,
 
   kitchenShowroomHero: `${BASE}/1779591698850_kitchen-showroom-hero.jpg`,
   kitchenCabinetryFinished: `${BASE}/1779591700274_kitchen-cabinetry-finished.jpeg`,
