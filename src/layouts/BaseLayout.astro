@@ -32,6 +32,16 @@ const { title, description, path, keywords, imageUrl, imageAlt } = Astro.props;
     <main>
       <slot />
     </main>
+    <section class="bg-cream py-20">
+      <div class="mx-auto max-w-3xl px-6 text-center" data-reveal>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-charcoal">Our Mission</h2>
+        <p class="mt-6 text-muted text-lg normal-case leading-relaxed">Whether you're a skilled DIY enthusiast, a professional contractor, or someone envisioning the kitchen or bath of your dreams, Absolute Supply Company is here to be your ultimate source for cabinets, countertops, and vinyl plank flooring. Trust us to provide you with the highest quality materials and unparalleled service to bring your vision to life.</p>
+        <div class="mt-8 flex flex-col items-center gap-4">
+          <a href="https://hyppohq.io/f/absolute-supply/contact-absolute-kitchen-and-bath?theme=light" class="inline-block w-64 text-center bg-brand-red hover:bg-brand-red-dark text-white px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Contact Us</a>
+          <a href="tel:3213455641" class="inline-block w-64 text-center border border-charcoal hover:bg-charcoal hover:text-white text-charcoal px-7 py-3.5 text-sm font-semibold uppercase tracking-wider transition-colors">Call 321-345-5641</a>
+        </div>
+      </div>
+    </section>
     <Footer />
     <script>
       import '../scripts/reveal.ts';
