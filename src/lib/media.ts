@@ -9,9 +9,9 @@ export const media = {
   iconCustomerService: `${BASE}/1779741075863_customer-service-icon.png`,
   iconDesignServices: `${BASE}/1779741076636_design-services-icon.png`,
 
-  kitchenShowroomHero: `${BASE}/1779591698850_kitchen-showroom-hero.jpg`,
-  kitchenCabinetryFinished: `${BASE}/1779591700274_kitchen-cabinetry-finished.jpeg`,
-  kitchenCounterQuartz: `${BASE}/1779746219661_countertop-edge-profile-closeup.jpg`,
+  kitchenShowroomHero: `${BASE}/1779898369494_kitchen-showroom-hero-opt.jpg`,
+  kitchenCabinetryFinished: `${BASE}/1779898372373_kitchen-cabinetry-finished-opt.jpg`,
+  kitchenCounterQuartz: `${BASE}/1779898383820_countertop-edge-profile-closeup-opt.jpg`,
   flooringInstallation: `${BASE}/1779591703174_flooring-installation.jpg`,
   cabinetShowcase: `${BASE}/1779591703977_cabinet-showcase.jpg`,
 
@@ -23,11 +23,11 @@ export const media = {
   kitchen3dDesign: `${BASE}/1779591710833_kitchen-3d-design-software.png`,
   hardwareResourcesOrganizers: `${BASE}/1779591712570_hardware-resources-organizers.png`,
 
-  brandFabuwoodSwatches: `${BASE}/1779591714010_fabuwood.png`,
-  brandSchrockSwatches: `${BASE}/1779591715078_schrock.png`,
-  brandMantraSwatches: `${BASE}/1779591716077_mantra.png`,
-  brandNorthpointSwatches: `${BASE}/1779591717115_northpoint.png`,
-  brandPompeiiQuartzSwatches: `${BASE}/1779591718142_pompeii-quartz.png`,
+  brandFabuwoodSwatches: `${BASE}/1779898400408_fabuwood-swatches-opt.png`,
+  brandSchrockSwatches: `${BASE}/1779898392414_schrock-swatches-opt.png`,
+  brandMantraSwatches: `${BASE}/1779898402857_mantra-swatches-opt.png`,
+  brandNorthpointSwatches: `${BASE}/1779898394986_northpoint-swatches-opt.png`,
+  brandPompeiiQuartzSwatches: `${BASE}/1779898397671_pompeii-quartz-swatches-opt.png`,
   brandHardwareResources: `${BASE}/1779591718840_hardware-resources.png`,
   brandProkitchen: `${BASE}/1779591719358_prokitchen.png`,
 
@@ -48,9 +48,9 @@ export const media = {
   flooringHero2: `${BASE}/1779747224560_flooring-hero-2-white-kitchen.jpg`,
   flooringHero3: `${BASE}/1779747226241_flooring-hero-3-dark-vinyl-kitchen.jpg`,
 
-  cabinetsHero2: `${BASE}/1779747819643_bath-vanity-installation.jpg`,
-  cabinetsHero3: `${BASE}/1779747822114_cabinet-hardware-detail.jpg`,
+  cabinetsHero2: `${BASE}/1779898375274_bath-vanity-installation-opt.jpg`,
+  cabinetsHero3: `${BASE}/1779898381020_cabinet-hardware-detail-opt.jpg`,
 
-  countertopsHero1: `${BASE}/1779748703346_quartz-kitchen-island-close-up.png`,
-  countertopsHero2: `${BASE}/1779748706192_bathroom-vanity-with-stone-countertop.png`,
+  countertopsHero1: `${BASE}/1779898386624_quartz-kitchen-island-close-up-opt.webp`,
+  countertopsHero2: `${BASE}/1779898389518_bathroom-vanity-with-stone-countertop-opt.webp`,
 };

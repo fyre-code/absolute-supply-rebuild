@@ -27,9 +27,9 @@ const keywords = [
 >
   <section class="relative pt-20 pb-24 bg-charcoal text-white overflow-hidden">
     <div id="countertops-hero-bg" class="absolute inset-0">
-      <img src={media.countertopsHero1} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover" />
-      <img src={media.countertopsHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" />
-      <img src={media.kitchenCounterQuartz} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" />
+      <img src={media.countertopsHero1} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+      <img src={media.countertopsHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" loading="lazy" fetchpriority="low" decoding="async" />
+      <img src={media.kitchenCounterQuartz} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" loading="lazy" fetchpriority="low" decoding="async" />
       <div class="absolute inset-0 bg-charcoal/55"></div>
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
@@ -53,9 +53,9 @@ const keywords = [
       </div>
       <div class="mt-12 flex flex-col items-center text-center" data-reveal>
         <div class="h-20 flex items-center justify-center">
-          <img src={media.logoPompeiiQuartz} alt="Pompeii Quartz logo" class="max-h-20 w-auto object-contain" loading="lazy" />
+          <img src={media.logoPompeiiQuartz} alt="Pompeii Quartz logo" class="max-h-20 w-auto object-contain" loading="lazy" decoding="async" />
         </div>
-        <img src={media.brandPompeiiQuartzSwatches} alt="Pompeii Quartz color samples" class="mt-6 w-full max-w-3xl h-auto object-contain" loading="lazy" />
+        <img src={media.brandPompeiiQuartzSwatches} alt="Pompeii Quartz color samples" class="mt-6 w-full max-w-3xl h-auto object-contain" loading="lazy" decoding="async" />
         <a href="https://pompeiiquartz.com/colors/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-64 text-center bg-charcoal hover:bg-black text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from Pompeii Quartz</a>
       </div>
 

@@ -35,9 +35,9 @@ const brands = [
 >
   <section class="relative pt-20 pb-24 bg-charcoal text-white overflow-hidden">
     <div id="cabinets-hero-bg" class="absolute inset-0">
-      <img src={media.kitchenCabinetryFinished} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover" />
-      <img src={media.cabinetsHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" />
-      <img src={media.cabinetsHero3} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" />
+      <img src={media.kitchenCabinetryFinished} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" />
+      <img src={media.cabinetsHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" loading="lazy" fetchpriority="low" decoding="async" />
+      <img src={media.cabinetsHero3} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover" loading="lazy" fetchpriority="low" decoding="async" />
       <div class="absolute inset-0 bg-charcoal/55"></div>
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
@@ -63,10 +63,10 @@ const brands = [
         {brands.map((b, i) => (
           <div data-reveal class:list={['flex flex-col items-center text-center h-full pb-8 md:pb-0', i < brands.length - 1 && 'border-b border-charcoal/15 md:border-0']}>
             <div class="h-24 md:h-32 flex items-center justify-center">
-              <img src={b.logo} alt={`${b.name} logo`} class="max-h-24 md:max-h-32 w-auto object-contain" loading="lazy" />
+              <img src={b.logo} alt={`${b.name} logo`} class="max-h-24 md:max-h-32 w-auto object-contain" loading="lazy" decoding="async" />
             </div>
             <div class="mt-2 md:mt-5 h-48 md:h-56 w-full flex items-center justify-center">
-              <img src={b.swatches} alt={`${b.name} cabinet finish swatches`} class="max-h-48 md:max-h-56 w-full object-contain" loading="lazy" />
+              <img src={b.swatches} alt={`${b.name} cabinet finish swatches`} class="max-h-48 md:max-h-56 w-full object-contain" loading="lazy" decoding="async" />
             </div>
             <a href={b.href} target="_blank" rel="noopener noreferrer" class="mt-2 md:mt-auto md:pt-6 inline-block">
               <span class="inline-block w-64 text-center bg-charcoal hover:bg-black text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from {b.name}</span>

@@ -14,7 +14,7 @@ const { slides } = Astro.props;
   <div id="hero-carousel" class="absolute inset-0">
     {slides.map((s, i) => (
       <div class:list={['carousel-slide absolute inset-0', i === 0 && 'is-active']} data-slide={i}>
-        <img src={s.image} alt={s.alt} class="absolute inset-0 w-full h-full object-cover" />
+        <img src={s.image} alt={s.alt} class="absolute inset-0 w-full h-full object-cover" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'low'} decoding="async" />
         <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70"></div>
         <div class="relative h-full flex items-center">
           <div class="mx-auto max-w-7xl px-6 w-full">

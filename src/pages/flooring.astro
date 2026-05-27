@@ -22,9 +22,9 @@ const keywords = [
 >
   <section class="relative pt-20 pb-24 bg-charcoal text-white overflow-hidden">
     <div id="flooring-hero-bg" class="absolute inset-0">
-      <img src={media.flooringHero1} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover object-bottom" />
-      <img src={media.flooringHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover object-bottom" />
-      <img src={media.flooringHero3} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover object-bottom" />
+      <img src={media.flooringHero1} alt="" class="carousel-slide is-active absolute inset-0 w-full h-full object-cover object-bottom" loading="eager" fetchpriority="high" decoding="async" />
+      <img src={media.flooringHero2} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy" fetchpriority="low" decoding="async" />
+      <img src={media.flooringHero3} alt="" class="carousel-slide absolute inset-0 w-full h-full object-cover object-bottom" loading="lazy" fetchpriority="low" decoding="async" />
       <div class="absolute inset-0 bg-charcoal/55"></div>
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
@@ -44,10 +44,10 @@ const keywords = [
   <section class="py-20 bg-white">
     <div class="mx-auto max-w-6xl px-6 lg:space-y-20">
       <div data-reveal class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pb-12 lg:pb-0 border-b border-charcoal/15 lg:border-0 mb-12 lg:mb-0">
-        <img src={media.photoShaw} alt="Shaw vinyl plank flooring" class="w-full h-auto" loading="lazy" />
+        <img src={media.photoShaw} alt="Shaw vinyl plank flooring" class="w-full h-auto" loading="lazy" decoding="async" />
         <div class="text-center">
           <div class="h-20 flex items-center justify-center">
-            <img src={media.logoShaw} alt="Shaw logo" class="max-h-20 w-auto object-contain" loading="lazy" />
+            <img src={media.logoShaw} alt="Shaw logo" class="max-h-20 w-auto object-contain" loading="lazy" decoding="async" />
           </div>
           <p class="mt-4 text-muted text-lg normal-case leading-relaxed">Shaw, a leader in the flooring industry, brings their expertise and innovation to every product they create. Their vinyl plank flooring options showcase remarkable craftsmanship, durability, and stunning designs that effortlessly elevate any space. Whether you prefer a classic wood look or a contemporary style, Shaw's vinyl plank flooring offers an array of options to suit your aesthetic preferences and lifestyle.</p>
           <a href="https://shawfloors.com/en-us/vinyl-luxuryplankandtile" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-64 text-center bg-charcoal hover:bg-black text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from Shaw</a>
@@ -57,19 +57,19 @@ const keywords = [
       <div data-reveal class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pb-12 lg:pb-0 border-b border-charcoal/15 lg:border-0 mb-12 lg:mb-0">
         <div class="text-center">
           <div class="h-20 flex items-center justify-center">
-            <img src={media.logoAudacity} alt="Audacity logo" class="max-h-20 w-auto object-contain" loading="lazy" />
+            <img src={media.logoAudacity} alt="Audacity logo" class="max-h-20 w-auto object-contain" loading="lazy" decoding="async" />
           </div>
           <p class="mt-4 text-muted text-lg normal-case leading-relaxed">Audacity, as the name suggests, pushes the boundaries of what vinyl plank flooring can achieve. Their innovative engineering creates flooring that is not only visually stunning but also exceptionally resilient. Audacity's unique construction ensures superior water resistance, making it ideal for areas prone to moisture, such as kitchens and bathrooms. Experience the ultimate peace of mind with Audacity's remarkable vinyl plank flooring.</p>
           <a href="https://audacityflooring.com/collections-hybrid-products/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-64 text-center bg-charcoal hover:bg-black text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from Audacity</a>
         </div>
-        <img src={media.photoAudacity} alt="Audacity vinyl plank flooring" class="w-full h-auto" loading="lazy" />
+        <img src={media.photoAudacity} alt="Audacity vinyl plank flooring" class="w-full h-auto" loading="lazy" decoding="async" />
       </div>
 
       <div data-reveal class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <img src={media.photoHappyFeet} alt="Happy Feet International vinyl plank flooring" class="w-full h-auto" loading="lazy" />
+        <img src={media.photoHappyFeet} alt="Happy Feet International vinyl plank flooring" class="w-full h-auto" loading="lazy" decoding="async" />
         <div class="text-center">
           <div class="h-20 flex items-center justify-center">
-            <img src={media.logoHappyFeet} alt="Happy Feet International logo" class="max-h-20 w-auto object-contain" loading="lazy" />
+            <img src={media.logoHappyFeet} alt="Happy Feet International logo" class="max-h-20 w-auto object-contain" loading="lazy" decoding="async" />
           </div>
           <p class="mt-4 text-muted text-lg normal-case leading-relaxed">Happy Feet International is dedicated to delivering vinyl plank flooring that combines beauty and functionality. Their meticulous attention to detail results in luxurious, realistic wood and stone textures, while their commitment to performance ensures that their flooring stands up to the demands of daily life. With Happy Feet International, you can enjoy the beauty of natural materials without compromising on durability and easy maintenance.</p>
           <a href="https://www.happyfeetinternational.com/products/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block w-64 text-center bg-charcoal hover:bg-black text-white px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-colors">See More Design Options from Happy Feet</a>
